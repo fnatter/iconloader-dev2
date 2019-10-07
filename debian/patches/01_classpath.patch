@@ -1,0 +1,30 @@
+--- a/build.xml
++++ b/build.xml
+@@ -76,7 +76,11 @@
+   <path id="library.eawtstub.classpath">
+     <pathelement location="${basedir}/lib/eawtstub.jar"/>
+   </path>
+-  
++
++  <path id="jetbrains-annotations.classpath">
++    <pathelement location="/usr/share/java/org.jetbrains.annotations-java8.jar"/>
++  </path>
++
+   <!-- Modules -->
+   
+   
+@@ -97,6 +101,7 @@
+   
+   <path id="iconloader.module.production.classpath">
+     <path refid="library.eawtstub.classpath"/>
++    <path refid="jetbrains-annotations.classpath"/>
+   </path>
+   
+   <path id="iconloader.runtime.production.module.classpath">
+@@ -193,4 +198,4 @@
+   </target>
+   
+   <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+-</project>
+\ No newline at end of file
++</project>

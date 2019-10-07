@@ -1,0 +1,22 @@
+Source: libiconloader-java
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Felix Natter <fnatter@gmx.net>
+Build-Depends:
+ ant-optional,
+ debhelper (>= 12),
+ maven-repo-helper,
+ default-jdk,
+ junit,
+ libjetbrains-annotations-java
+Standards-Version: 4.4.0
+Vcs-Git: https://github.com/fnatter/iconloader-dev
+Vcs-Browser: https://github.com/fnatter/iconloader-dev
+Homepage: https://github.com/bulenkov/iconloader
+
+Package: libiconloader-java
+Architecture: all
+Depends: ${misc:Depends}
+Suggests:
+Description: Smart Java Icon Loader with support of HiDPI (Retina) images.

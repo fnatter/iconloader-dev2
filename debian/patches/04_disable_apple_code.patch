@@ -1,0 +1,79 @@
+--- a/src/com/bulenkov/iconloader/AppleHiDPIScaledImage.java
++++ b/src/com/bulenkov/iconloader/AppleHiDPIScaledImage.java
+@@ -16,7 +16,7 @@
+ 
+ package com.bulenkov.iconloader;
+ 
+-import apple.awt.CImage;
++//import apple.awt.CImage;
+ 
+ import java.awt.*;
+ import java.awt.image.BufferedImage;
+@@ -26,14 +26,16 @@
+  */
+ public class AppleHiDPIScaledImage {
+   public static BufferedImage create(int width, int height, int imageType) {
+-    return new CImage.HiDPIScaledImage(width, height, imageType) {
+-      @Override
+-      protected void drawIntoImage(BufferedImage image, float scale) {
+-      }
+-    };
++    //return new CImage.HiDPIScaledImage(width, height, imageType) {
++    //  @Override
++    //  protected void drawIntoImage(BufferedImage image, float scale) {
++    //  }
++    //};
++    return null;
+   }
+ 
+   public static boolean is(Image image) {
+-    return image instanceof CImage.HiDPIScaledImage;
++      //return image instanceof CImage.HiDPIScaledImage;
++      return false;
+   }
+ }
+--- a/src/com/bulenkov/iconloader/IsRetina.java
++++ b/src/com/bulenkov/iconloader/IsRetina.java
+@@ -16,7 +16,7 @@
+ 
+ package com.bulenkov.iconloader;
+ 
+-import apple.awt.CImage;
++//import apple.awt.CImage;
+ import com.bulenkov.iconloader.util.Ref;
+ 
+ import java.awt.image.BufferedImage;
+@@ -26,20 +26,21 @@
+  */
+ public class IsRetina {
+   public static boolean isRetina() {
+-    try {
+-      final Ref<Boolean> isRetina = Ref.create(false);
++    // try {
++    //   final Ref<Boolean> isRetina = Ref.create(false);
+ 
+-      new CImage.HiDPIScaledImage(1, 1, BufferedImage.TYPE_INT_ARGB) {
+-        @Override
+-        public void drawIntoImage(BufferedImage image, float v) {
+-          isRetina.set(v > 1);
+-        }
+-      };
+-
+-      return isRetina.get();
+-    } catch (Throwable ignore) {
++    //   new CImage.HiDPIScaledImage(1, 1, BufferedImage.TYPE_INT_ARGB) {
++    //     @Override
++    //     public void drawIntoImage(BufferedImage image, float v) {
++    //       isRetina.set(v > 1);
++    //     }
++    //   };
++
++    //   return isRetina.get();
++    // } catch (Throwable ignore) {
++    //   return false;
++    // }
+       return false;
+-    }
+   }
+ }
+ 

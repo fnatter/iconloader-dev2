@@ -1,0 +1,47 @@
+--- a/src/com/bulenkov/iconloader/util/StringFactory.java
++++ b/src/com/bulenkov/iconloader/util/StringFactory.java
+@@ -16,7 +16,7 @@
+ 
+ package com.bulenkov.iconloader.util;
+ 
+-import sun.reflect.ConstructorAccessor;
++//import sun.reflect.ConstructorAccessor;
+ 
+ import java.lang.reflect.Constructor;
+ import java.lang.reflect.Method;
+@@ -26,9 +26,10 @@
+  */
+ public class StringFactory {
+   // String(char[], boolean). Works since JDK1.7, earlier JDKs have too slow reflection anyway
+-  private static final ConstructorAccessor ourConstructorAccessor;
++  //private static final ConstructorAccessor ourConstructorAccessor;
+ 
+   static {
++      /*
+     ConstructorAccessor constructorAccessor = null;
+     try {
+       Constructor<String> newC = String.class.getDeclaredConstructor(char[].class, boolean.class);
+@@ -40,6 +41,7 @@
+     } catch (Exception ignored) {
+     }
+     ourConstructorAccessor = constructorAccessor;
++      */
+   }
+ 
+ 
+@@ -50,6 +52,7 @@
+    * DO NOT USE THIS METHOD UNLESS YOU ARE TOO DESPERATE
+    */
+   public static String createShared(char[] chars) {
++      /*
+     if (ourConstructorAccessor != null) {
+       try {
+         return (String) ourConstructorAccessor.newInstance(new Object[]{chars, Boolean.TRUE});
+@@ -57,6 +60,7 @@
+         throw new RuntimeException(e);
+       }
+     }
++      */
+     return new String(chars);
+   }
+ }

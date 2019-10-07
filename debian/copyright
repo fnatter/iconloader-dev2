@@ -1,0 +1,19 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: iconloader
+Upstream-Contact: Konstantin Bulenkov <?@bulenkov.com>
+Source: https://github.com/bulenkov/iconloader
+Files-Excluded:
+ iconloader.jar
+ lib/*.jar
+
+Files: *
+Copyright: 2014-2017 Konstantin Bulenkov <?@bulenkov.com>
+License: Apache-2.0
+ On Debian systems the full text of the Apache-2.0 license can be found in
+ /usr/share/common-licenses/Apache-2.0.
+
+Files: debian/*
+Copyright: 2019 Felix Natter <fnatter@gmx.net>
+License: Apache-2.0
+ On Debian systems the full text of the Apache-2.0 license can be found in
+ /usr/share/common-licenses/Apache-2.0.

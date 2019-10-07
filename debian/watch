@@ -1,0 +1,5 @@
+version=4
+opts="pretty=0.0+git%cd.%h, mode=git" \
+ https://github.com/bulenkov/iconloader.git \
+ heads/master debian
+ 
