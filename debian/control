@@ -20,3 +20,4 @@ Architecture: all
 Depends: ${misc:Depends}
 Suggests:
 Description: Smart Java Icon Loader with support of HiDPI (Retina) images.
+ This is required for loading images in darcula (same author).

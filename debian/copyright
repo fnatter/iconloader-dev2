@@ -9,11 +9,11 @@ Files-Excluded:
 Files: *
 Copyright: 2014-2017 Konstantin Bulenkov <?@bulenkov.com>
 License: Apache-2.0
- On Debian systems the full text of the Apache-2.0 license can be found in
- /usr/share/common-licenses/Apache-2.0.
 
 Files: debian/*
 Copyright: 2019 Felix Natter <fnatter@gmx.net>
+License: Apache-2.0
+
 License: Apache-2.0
  On Debian systems the full text of the Apache-2.0 license can be found in
  /usr/share/common-licenses/Apache-2.0.
