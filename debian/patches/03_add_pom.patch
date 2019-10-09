@@ -1,3 +1,7 @@
+Description: Add pom.xml for com.bulenkov:iconloader:<git head>
+Author: Felix Natter <fnatter@gmx.net>
+Forwarded: not-needed
+Last-Update: 2019-10-09
 --- /dev/null
 +++ b/pom.xml
 @@ -0,0 +1,24 @@
@@ -7,7 +11,7 @@
 +  <modelVersion>4.0.0</modelVersion>
 +  <groupId>com.bulenkov</groupId>
 +  <artifactId>iconloader</artifactId>
-+  <version>0.1+20191003</version>
++  <version>0.0+git20170615</version>
 +  <dependencies>
 +    <dependency>
 +      <groupId>org.jetbrains</groupId>

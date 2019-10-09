@@ -1,3 +1,9 @@
+Description: Comment out code using apple code (apple.awt.*)
+ (isRetina.isRetina() always returns false)
+Author: Felix Natter <fnatter@gmx.net>
+Forwarded: not-needed
+Last-Update: 2019-10-09
+
 --- a/src/com/bulenkov/iconloader/AppleHiDPIScaledImage.java
 +++ b/src/com/bulenkov/iconloader/AppleHiDPIScaledImage.java
 @@ -16,7 +16,7 @@

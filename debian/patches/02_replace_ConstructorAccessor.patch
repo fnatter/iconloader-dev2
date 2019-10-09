@@ -1,3 +1,7 @@
+Description: Remove usage of sun.reflect.ConstructorAccessor
+Author: Felix Natter <fnatter@gmx.net>
+Forwarded: no
+Last-Update: 2019-10-09
 --- a/src/com/bulenkov/iconloader/util/StringFactory.java
 +++ b/src/com/bulenkov/iconloader/util/StringFactory.java
 @@ -16,7 +16,7 @@
